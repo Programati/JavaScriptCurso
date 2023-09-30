@@ -45,7 +45,7 @@ const amigos = ['Alejandro', 'Cesar', 'Manuel'];
 //Segundo Argumento es la cantidad de elementos a liminar
 //Tercer Argumento y más, van a ser lo elementos a agregar desde la posicion en la cual estamos ubicados
 amigos.splice(/*Posicionamiento*/1, /*Cantidad de elementos a eliminar*/0, /*Elemento a agregar*/'Rafael', 'Roberto');
-console.log(amigos);
+// console.log(amigos);
 
 /* .SLICE()
     Nos permite copiar una parte de un arreglo a otro
@@ -55,4 +55,42 @@ console.log(amigos);
 const frutas = ['Manzana', 'Naranja', 'Uva', 'Pera', 'Sandia', 'Banana'];
 
 const frutasFavoritas = frutas.slice(1,4);
-console.log(frutasFavoritas);
+// console.log(frutasFavoritas);
+
+/* .INDEXOF()
+    Obtiene el primer index de un elemento, del primer elemento que encontro
+    Si hay uno 2 veces, nos devuelve el primero
+    Si no encuentra el elemento nos retorna -1
+    Nos facilita saber si el elemento está dentro del arreglo
+*/
+
+const nombres = ['Cristian','Carlos', 'Rafael', 'Cristian','Estefania', 'Rodrigo', 'Rafael','Carlos','Carla'];
+console.log(nombres.indexOf('Matias'));
+/* .LASTINDEXOF()
+    Obtiene el ultimo index de un elemento, lo mismo que el anterior
+    Por ejemplo si hay dos elementos iguales, nos da la posicion del ultimo
+    En este caso nos devuelve la posicion del ultimo CARLOS
+*/
+// console.log(nombres.indexOf('Carlos'));
+// console.log(nombres.lastIndexOf('Carlos'));
+
+/*
+    .forEach()
+    Nos permite ejecutar una funcion por cada elemento
+*/
+// nombres.forEach((nombre, index, arregloEntero) => {
+//     console.log(`Hola ${nombre} (${index}) (${arregloEntero})`);
+// });
+
+/**
+ * .find()
+ * Nos permite recorrer un arreglo y devuelve el PRIMER elemento que retornemos
+ */
+
+const resultado = nombres.find((nombre) => {
+    if(nombre[0] == 'C'){
+        return nombre;
+    }
+});
+
+console.log(resultado);
