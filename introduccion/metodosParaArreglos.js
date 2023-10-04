@@ -94,3 +94,76 @@ const resultado = nombres.find((nombre) => {
 });
 
 console.log(resultado);
+
+/**
+ * .map()
+ * Nos prermite ejecutar una función por cada elemento y crear un nuevo arreglo
+ * en base a los resultados de esa funcion
+ * Siempre va a devolver la misma cantidad de elementos del arreglo, por más
+ * que tenga un elemento indefinido o le agreguemos una condicion que no cumpla
+ */
+
+console.log(
+    nombres.map((nombre) => nombre.toUpperCase())
+);
+
+/**
+ * .filter()
+ * Igual que el MAP, pero va a devolver los resultados de una condicion
+ */
+
+console.log(
+    nombres.filter((nombre)=>{
+        if(nombre[0] == 'C'){
+            return nombre;
+        }
+    } )
+);
+
+/**
+ * includes()
+ * Nos permite saber si el arreglo contiene un elemento especificado
+ */
+console.log(
+    nombres.includes('Ezequiel')
+);
+
+/**
+ * .every()
+ * Nos permite ejecutar una condicional sobre cada elemento y nos devuelve
+ * TRUE si TODOS los elementos cumplen la funcion
+ */
+const productos = [
+    {
+        nombre: 'pera',
+        precio: 120
+    },
+    {
+        nombre: 'manzana',
+        precio: 100
+    },
+    {
+        nombre: 'naranja',
+        precio: 150
+    },
+    {
+        nombre: 'uva',
+        precio: 90
+    }
+]
+console.log(
+    productos.every((frutas)=>{
+        return frutas.precio > 149;
+    })
+);
+/**
+ * .some()
+ * Nos permite ejecutar una condicional sobre cada elemento y nos devuelve
+ * TRUE si ALGUN elemento cumple la funcion, es decir, por lo menos uno
+ */
+
+console.log(
+    productos.some((frutas)=>{
+        return frutas.precio > 149;
+    })
+);
