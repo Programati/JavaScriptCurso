@@ -33,3 +33,14 @@ console.log(
 1° cortamos la frase [Hola a todos, Hola mundo] = [Hola mundo]
 2° cortamos hasta el espacio en blanco = [Hola]
 */
+
+/**----------------------------- */
+
+/**
+ * .split()
+ * Convierte una cadena de texto en un arreglo
+ * Tenemos que especificar donde cortar elemento
+ * 
+ * 1er parametro - el caracter que funciona como separador
+ */
+console.log(texto.split(' '));
