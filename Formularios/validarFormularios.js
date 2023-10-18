@@ -21,17 +21,17 @@ formulario.addEventListener('submit', (e) => {
         console.log('Pais invalido');
         return;
     }
-
+    // Comprobamos la donacion
     if(datos.donacion === ''){
         console.log('Selecciona una cantidad a donar');
         return;
     }
-
+    // Comprobamos si seleccionó fecha
     if(datos.fecha === ''){
         console.log('Selecciona una fecha');
         return;
     }
-
+    // Comprobamos si aceptó los terminos y condiciones
     if(!datos.terminos){
         console.log('Acepte los términos y condiciones');
         return;
